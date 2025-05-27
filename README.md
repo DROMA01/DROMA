@@ -45,13 +45,19 @@ Include 17 datasets now(11 cell line, 2 PDC, 3 PDO, 1 PDX), totally 2599 unique 
 
 ## Citation
 
-If you use DROMA-DB in your research, please cite:
+If you use DROMA or any subprojects(DB, R, web..) in your research, please cite:
 
 Li, S., Peng, Y., Chen, M. et al. Facilitating integrative and personalized oncology omics analysis with UCSCXenaShiny. Commun Biol 7, 1200 (2024). https://doi.org/10.1038/s42003-024-06891-2
 
 
 
 ## Milestone
+
+### 0526 v0.4 andata
+
+坂本龍一:【氛围感｜andata (Electric Youth Remix)】 https://www.bilibili.com/video/BV1v7kAY7Eoi/?share_source=copy_web&vd_source=bd40fa636d7a7f4f2a51596fed85e2b0
+
+
 
 ### 0513 v0.3
 
