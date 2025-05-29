@@ -23,6 +23,12 @@ DROMA_R: [mugpeng/DROMA_R: R package for DROMA.](https://github.com/mugpeng/DROM
 
 DROMA_Web: [mugpeng/DROMA_Web: Shiny website for Drug Response Omics association MAp. (DROMA)](https://github.com/mugpeng/DROMA_web)
 
+- AI and AI agent:
+
+DROMA_MCP: [mugpeng/DROMA_MCP: DROMA MCP Server bridges the gap between AI assistants and cancer pharmacogenomics analysis by providing a natural language interface to the [DROMA.R](https://github.com/mugpeng/DROMA_R) and [DROMA.Set](https://github.com/mugpeng/DROMA_Set) packages.](https://github.com/mugpeng/DROMA_MCP)
+
+
+
 - Under development:
 
 DROMA_MCP, DROMA_AI, DROMA_Augur, DROMA_py

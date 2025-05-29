@@ -5,6 +5,11 @@
 - [ ] Accelerate batchFindSignificantFeatures (too slow now)
 - [ ] Add enrichment methods
 - [ ] add raw dose viability part, recomputeAUC using PharmacoGx method,
+- [ ] Add combintation drugs results parts
+  - [ ] in house
+  - [ ] synergy prediction
+
+
 
 
 
@@ -12,13 +17,11 @@
 
 - [ ] single data compare, find cell line, compare types(CXP)
   - [ ] Try Co_Occurence(like maftools) part for drugs
+- [ ] Fix intersection part, the intersected should be strickly same cells in all studies (two features of all datasets)
 - [x] Harmonized drug and cell names
   - [x] how to build a name checker agent?
-- [ ] How to allow user analysis data without loading all datasets locally
+- [x] How to allow user analysis data without loading all datasets locally
 - [ ] reload normalization will cause process dead
-- [ ] Add combintation drugs results parts
-  - [ ] in house
-  - [ ] synergy prediction
 - [ ] server check2 (make shiny load faster)
   - Preloading noticed screen
   - options(shiny.idle_timeout = 0)
@@ -31,7 +34,6 @@
 - [ ] more detailed cellline data
   - [ ] [Cellosaurus cell line MDA-MB-361 (CVCL_0620)](https://www.cellosaurus.org/CVCL_0620)
 - [ ] [Integrating heterogeneous drug sensitivity data from cancer pharmacogenomic studies - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5239501/) calculate other matric
-
 - [ ] Add ecDNA predict method
   - MYC ecDNA promotes intratumour heterogeneity and plasticity in PDAC, AmpliconArchitect
 - [ ] 
