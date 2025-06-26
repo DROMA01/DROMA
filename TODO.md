@@ -3,8 +3,15 @@
 ## Major
 
 - [ ] Accelerate batchFindSignificantFeatures (too slow now)
+- [ ] Add new pdo data
+- [ ] Add new protein data
+  - [Nat Cancer | MD安德森癌症中心粱晗团队绘制蛋白质表达图谱，涵盖447种临床相关蛋白质|细胞系|mrna_网易订阅](https://www.163.com/dy/article/JE2TIMCF0556721A.html)
 - [ ] Add enrichment methods
 - [ ] add raw dose viability part, recomputeAUC using PharmacoGx method,
+- [ ] Add PDO WES and recheck cellline WES results
+  - seems not filter for introme and synonymous mut in cell line project
+  - but some pdo projects only use non-synonymous extrome data
+- [ ] Add data ranking check(allow user highlight interested features), drug rank(select a cell) and cell rank(select a feature)
 - [ ] Add combintation drugs results parts
   - [ ] in house
   - [ ] synergy prediction
@@ -15,6 +22,7 @@
 
 ## Middle
 
+- [ ] Fix funcstat plot
 - [ ] single data compare, find cell line, compare types(CXP)
   - [ ] Try Co_Occurence(like maftools) part for drugs
 - [ ] Fix intersection part, the intersected should be strickly same cells in all studies (two features of all datasets)
@@ -26,8 +34,6 @@
   - Preloading noticed screen
   - options(shiny.idle_timeout = 0)
   - Using the future and promises packages to run computations asynchronously
-- [ ] Add data ranking check(allow user highlight interested features), drug rank(select a cell) and cell rank(select a feature)
-- [ ] Add PDO WES
 - [ ] add chemical structure info 
 - [ ] https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-014-0367-1/figures/1 seems better to use rank based method (how to solve the direction problem, seems ok, smaller means another direction, and the median rank is to devide into two parts)
   - try to see the performance of rank method
@@ -43,7 +49,6 @@
 ## Minor
 
 - [ ] what para orchestra official used for calculate AAC
-- [ ] recheck cellline WES results
 - [ ] Add drug annotation for drug screen in batch mode
 - [x] volcano plot seems a bug wrongly highlight top5
 - [ ] Add compare methods
