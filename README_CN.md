@@ -1,15 +1,21 @@
 # DROMA
 **药物反应组学关联图谱** (DROMA, 卓玛)  
 
+[![Website](https://img.shields.io/website?url=https%3A//droma01.github.io/)](https://droma01.github.io/)
 [![GitHub Stars](https://img.shields.io/github/stars/mugpeng/DROMA?style=social)](https://github.com/mugpeng/DROMA)
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL--2.0-yellow.svg)](https://opensource.org/licenses/MPL-2.0)
 [![R](https://img.shields.io/badge/R-%3E%3D4.0.0-blue.svg)](https://www.r-project.org/)
 [![Python](https://img.shields.io/badge/Python-3.10+-green.svg)](https://www.python.org/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15497674.svg)](https://doi.org/10.5281/zenodo.15497674)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15742800.svg)](https://doi.org/10.5281/zenodo.15742800)
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/000473aa-7869-41c8-9352-e8481ba922fa" alt="DROMA Logo" width="400"/>
 </div>
+
+## 🌐 官方网站
+**访问DROMA官方网站：[https://droma01.github.io/](https://droma01.github.io/)**
+
+探索交互式网页界面，包含完整文档、组件详情和实时示例。
 
 ## 🌟 项目概述
 
@@ -114,7 +120,7 @@ DROMA平台由相互连接的组件组成，共同提供完整的药物反应分
 devtools::install_github("mugpeng/DROMA_Set")
 
 # 从Zenodo下载数据
-# https://zenodo.org/records/15497674
+# https://zenodo.org/records/15742800
 
 # 创建数据库
 library(DROMA.Set)
@@ -176,7 +182,7 @@ pip install droma-mcp
 ### 数据下载
 ```bash
 # 从Zenodo下载 (15.5 GB)
-wget https://zenodo.org/records/15497674/files/droma-data.zip
+wget https://zenodo.org/records/15742800/files/droma-data.zip
 unzip droma-data.zip
 ```
 
@@ -309,7 +315,7 @@ DROMA已被用于：
 - **AI界面**: [github.com/mugpeng/DROMA_MCP](https://github.com/mugpeng/DROMA_MCP)
 
 ### **数据与资源**
-- **数据仓库**: [Zenodo记录](https://zenodo.org/records/15497674)
+- **数据仓库**: [Zenodo记录](https://zenodo.org/records/15742800)
 - **文档**: 组件特定的README文件
 - **示例**: 每个仓库中的全面使用示例
 

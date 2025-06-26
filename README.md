@@ -1,15 +1,21 @@
 # DROMA
 **Drug Response Omics association MAp** (DROMA, 卓玛)  
 
+[![Website](https://img.shields.io/website?url=https%3A//droma01.github.io/)](https://droma01.github.io/)
 [![GitHub Stars](https://img.shields.io/github/stars/mugpeng/DROMA?style=social)](https://github.com/mugpeng/DROMA)
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL--2.0-yellow.svg)](https://opensource.org/licenses/MPL-2.0)
 [![R](https://img.shields.io/badge/R-%3E%3D4.0.0-blue.svg)](https://www.r-project.org/)
 [![Python](https://img.shields.io/badge/Python-3.10+-green.svg)](https://www.python.org/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15497674.svg)](https://doi.org/10.5281/zenodo.15497674)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15742800.svg)](https://doi.org/10.5281/zenodo.15742800)
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/000473aa-7869-41c8-9352-e8481ba922fa" alt="DROMA Logo" width="400"/>
 </div>
+
+## 🌐 Official Website
+**Visit the DROMA website at: [https://droma01.github.io/](https://droma01.github.io/)**
+
+Explore the interactive web interface with comprehensive documentation, component details, and live examples.
 
 ## 📋 Table of Contents
 - [🌟 Overview](#-overview)
@@ -21,6 +27,7 @@
 - [💻 Usage Examples](#-usage-examples)
 - [🌐 Web Interface](#-web-interface)
 - [🤖 AI Integration](#-ai-integration)
+- [🖥️ Official Website](#️-official-website)
 - [📖 Documentation](#-documentation)
 - [🤝 Contributing](#-contributing)
 - [📄 Citation](#-citation)
@@ -53,7 +60,7 @@ The DROMA platform consists of interconnected components that work together to p
 #### **[DROMA_DB](https://github.com/mugpeng/DROMA_DB)** - Database Foundation
 - **Purpose**: SQLite database creation and management
 - **Features**: Project-oriented structure, efficient querying, optimized indexing
-- **Content**: 21 projects with comprehensive omics and drug response data
+- **Content**: 20 projects with comprehensive omics and drug response data
 - **Integration**: Foundation for all other DROMA components
 
 #### **[DROMA_Set](https://github.com/mugpeng/DROMA_Set)** - Data Management
@@ -99,7 +106,7 @@ Our comprehensive database includes:
 
 | **Metric** | **Count** | **Description** |
 |------------|-----------|-----------------|
-| **Projects** | 18 | Independent research datasets |
+| **Projects** | 20 | Independent research datasets |
 | **Samples** | 2,600+ | Unique biological samples |
 | **Drugs** | 56,000+ | Unique chemical compounds |
 | **Model Systems** | 4 types | Cell lines, PDOs, PDXs, Clinical |
@@ -130,7 +137,7 @@ Our comprehensive database includes:
 devtools::install_github("mugpeng/DROMA_Set")
 
 # Download data from Zenodo
-# https://zenodo.org/records/15497674
+# https://zenodo.org/records/15742800
 
 # Connect database
 library(DROMA.Set)
@@ -197,7 +204,7 @@ pip install droma-mcp
 ### Data Download
 ```bash
 # Download from Zenodo (15.5 GB)
-wget https://zenodo.org/records/15497674/files/droma-data.zip
+wget https://zenodo.org/records/15742800/files/droma.sqlite
 unzip droma-data.zip
 ```
 
@@ -209,6 +216,29 @@ Each component has comprehensive documentation:
 - **[DROMA_Set Documentation](https://github.com/mugpeng/DROMA_Set#readme)**: Data management and S4 classes
 - **[DROMA_R Documentation](https://github.com/mugpeng/DROMA_R#readme)**: Statistical analysis and visualization
 - **[DROMA_MCP Documentation](https://github.com/mugpeng/DROMA_MCP#readme)**: AI interface and natural language queries
+
+## 🖥️ Official Website
+
+**Visit [https://droma01.github.io/](https://droma01.github.io/)** for the complete DROMA experience:
+
+### 🌟 Website Features
+- **Interactive Homepage**: Animated DNA visualizations and ecosystem overview
+- **Component Documentation**: Detailed information about each DROMA module  
+- **Live Code Examples**: Copy-to-clipboard functionality for quick setup
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Professional Theme**: Scientific color palette with modern animations
+
+### 📱 User Experience
+- **No Installation Required**: Access DROMA information instantly in your browser
+- **Quick Navigation**: Jump between components, documentation, and examples
+- **Mobile-Friendly**: Full functionality on all device sizes
+- **Fast Loading**: Optimized performance with modern web technologies
+
+### 🔗 Direct Links
+- **Component Details**: Deep-dive into DROMA_DB, DROMA_Set, DROMA_R, DROMA_Web, and DROMA_MCP
+- **Installation Guides**: Step-by-step setup instructions for each component
+- **GitHub Integration**: Direct links to all source repositories
+- **Data Access**: Links to Zenodo datasets and documentation
 
 ## 🎯 Use Cases
 
@@ -357,7 +387,7 @@ We welcome contributions to the DROMA ecosystem!
 - **AI Interface**: [github.com/mugpeng/DROMA_MCP](https://github.com/mugpeng/DROMA_MCP)
 
 ### **Data & Resources**
-- **Data Repository**: [Zenodo Record](https://zenodo.org/records/15497674)
+- **Data Repository**: [Zenodo Record](https://zenodo.org/records/15742800)
 - **Documentation**: Component-specific README files
 - **Examples**: Comprehensive usage examples in each repository
 
