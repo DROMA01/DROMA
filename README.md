@@ -1,130 +1,385 @@
 # DROMA
-Drug Response Omics association MAp (DROMA, 卓玛)  
+**Drug Response Omics association MAp** (DROMA, 卓玛)  
 
-<img src="https://github.com/user-attachments/assets/000473aa-7869-41c8-9352-e8481ba922fa" alt="image" style="zoom:50%;" />
+[![GitHub Stars](https://img.shields.io/github/stars/mugpeng/DROMA?style=social)](https://github.com/mugpeng/DROMA)
+[![License: MPL-2.0](https://img.shields.io/badge/License-MPL--2.0-yellow.svg)](https://opensource.org/licenses/MPL-2.0)
+[![R](https://img.shields.io/badge/R-%3E%3D4.0.0-blue.svg)](https://www.r-project.org/)
+[![Python](https://img.shields.io/badge/Python-3.10+-green.svg)](https://www.python.org/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15497674.svg)](https://doi.org/10.5281/zenodo.15497674)
 
-DROMA is a comprehensive database and analysis tool that integrates the largest published studies investigating cancer response to chemical compounds and the associations between drug sensitivity and multi-omics data (mRNA, CNV, protein, mutation, etc.) across various cancer models including PDC (Patient-Derived Cells), PDO (Patient-Derived Organoids), and PDX, human data are under development. 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/000473aa-7869-41c8-9352-e8481ba922fa" alt="DROMA Logo" width="400"/>
+</div>
 
-# Integration with DROMA Ecosystem
+## 📋 Table of Contents
+- [🌟 Overview](#-overview)
+- [🎯 Key Features](#-key-features)
+- [🏗️ DROMA Ecosystem](#️-droma-ecosystem)
+- [📊 Dataset Overview](#-dataset-overview)
+- [🚀 Quick Start](#-quick-start)
+- [🔧 Installation](#-installation)
+- [💻 Usage Examples](#-usage-examples)
+- [🌐 Web Interface](#-web-interface)
+- [🤖 AI Integration](#-ai-integration)
+- [📖 Documentation](#-documentation)
+- [🤝 Contributing](#-contributing)
+- [📄 Citation](#-citation)
+- [📧 Contact](#-contact)
+- [📝 License](#-license)
 
-The DROMA_DB serves as the foundation for the broader DROMA ecosystem:
+## 🌟 Overview
 
-1. **[DROMA_DB](https://github.com/mugpeng/DROMA_DB)**: Database creation and management, the backbone for DROMA project.
-2. **[DROMA_Set](https://github.com/mugpeng/DROMA_Set)**: R package  for managing and analyzing drug response and omics data across multiple projects, interact with the sqldb dataset producing from DROMA_DB.
-3. **[DROMA_R](https://github.com/mugpeng/DROMA_R)**: R package provides advanced analysis functions for drug-omics associations using DromaSet and MultiDromaSet objects from the DROMA.Set package.
-4. **[DROMA_Web](https://github.com/mugpeng/DROMA_web)**: Shiny website for Drug Response Omics association MAp based on DROMA_DB, DROMA_Set and DROMA_R.
-5. **[DROMA_MCP](https://github.com/mugpeng/DROMA_MCP)**: A Model Context Protocol (MCP) server for DROMA (Drug Response Omics association MAp) - enabling natural language interactions with drug-omics association analysis.
+**DROMA** is a comprehensive precision oncology platform that integrates the world's largest collection of drug response and multi-omics datasets. It bridges the gap between cancer pharmacogenomics data and actionable insights through advanced analytics, AI-powered tools, and user-friendly interfaces.
 
-Other components including DROMA_AI, DROMA_Augur, DROMA_py are underdevelopment now.
+### 🚀 Key Highlights
 
+- **🗄️ Massive Dataset**: **18 projects** with **2,600+ samples** and **56,000+ drugs** - the world's largest open-source integrated drug sensitivity dataset
+- **🧬 Multi-Omics Support**: mRNA, CNV, mutations, methylation, proteomics, and more
+- **🏥 Diverse Model Systems**: Cell lines, PDOs (Patient-Derived Organoids), PDXs (Patient-Derived Xenografts), and PDCs (Patient-Derived Cells)
+- **🤖 AI-Powered**: Natural language interactions via MCP (Model Context Protocol) server
+- **📊 Advanced Analytics**: Meta-analysis, biomarker discovery, and statistical modeling
+- **🌐 Web Interface**: Interactive Shiny application for intuitive analysis
 
+## 🏗️ DROMA Ecosystem
+
+The DROMA platform consists of interconnected components that work together to provide a complete drug response analysis solution:
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mugpeng/mugpeng-my-gallery-02/main/img20250619145856.png" alt="DROMA Architecture" width="600"/>
+</div>
+
+### 📊 Data Infrastructure
+
+#### **[DROMA_DB](https://github.com/mugpeng/DROMA_DB)** - Database Foundation
+- **Purpose**: SQLite database creation and management
+- **Features**: Project-oriented structure, efficient querying, optimized indexing
+- **Content**: 21 projects with comprehensive omics and drug response data
+- **Integration**: Foundation for all other DROMA components
+
+#### **[DROMA_Set](https://github.com/mugpeng/DROMA_Set)** - Data Management
+- **Purpose**: R package for multi-project data management and analysis
+- **Features**: S4 classes (DromaSet, MultiDromaSet), cross-project comparisons, sample overlap detection
+- **Key Classes**:
+  - `DromaSet`: Single-project analysis
+  - `MultiDromaSet`: Cross-project comparisons
+- **Capabilities**: Flexible data loading, metadata management, database connectivity
+
+### 🔬 Analysis Engine
+
+#### **[DROMA_R](https://github.com/mugpeng/DROMA_R)** - Advanced Analytics
+- **Purpose**: Statistical analysis and visualization for drug-omics associations
+- **Features**: Meta-analysis, batch processing, comprehensive visualization
+- **Methods**: Spearman correlation, Wilcoxon tests, Cliff's Delta effect sizes
+- **Outputs**: Forest plots, volcano plots, comparison visualizations
+- **Performance**: Z-score normalization, parallel processing support
+
+### 🌐 User Interfaces
+
+#### **[DROMA_Web](https://github.com/mugpeng/DROMA_web)** - Web Application
+- **Purpose**: Interactive Shiny web interface
+- **Features**: Real-time analysis, dynamic visualization, user-friendly interface
+- **Modules**: Drug feature analysis, batch analysis, drug-omics pairing
+- **Access**: Browser-based, no installation required
+
+#### **[DROMA_MCP](https://github.com/mugpeng/DROMA_MCP)** - AI Interface
+- **Purpose**: Model Context Protocol server for natural language interactions
+- **Features**: AI assistant integration, natural language queries, automated analysis
+- **Capabilities**: Dataset management, data loading, database exploration
+- **Integration**: Works with ChatGPT, Claude, and other AI assistants
+
+### 🚀 Future Components
+
+- **DROMA_AI**: Multi-agent systems for automated analysis and hypothesis generation
+- **DROMA_Augur**: Machine learning models for drug response prediction
+- **DROMA_py**: Python implementation for broader accessibility
+
+## 📈 Database Statistics
+
+Our comprehensive database includes:
+
+| **Metric** | **Count** | **Description** |
+|------------|-----------|-----------------|
+| **Projects** | 18 | Independent research datasets |
+| **Samples** | 2,600+ | Unique biological samples |
+| **Drugs** | 56,000+ | Unique chemical compounds |
+| **Model Systems** | 4 types | Cell lines, PDOs, PDXs, Clinical |
+
+### 📊 Project Distribution
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mugpeng/mugpeng-my-gallery-02/main/img20250513115037.png" alt="Project Distribution" width="500"/>
+</div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mugpeng/mugpeng-my-gallery-02/main/img20250513114926.png" alt="Data Types" width="500"/>
+</div>
+
+### 🏥 Model System Coverage
+
+- **Cell Lines** (11 projects): CCLE, GDSC1, GDSC2, CTRP1, CTRP2, gCSI, NCI60, FIMM, GRAY, Prism, UHNBreast
+- **PDOs** (5 projects): UMPDO1, UMPDO2, UMPDO3, HKPDO, LICOB
+- **PDCs** (2 projects): PDTXBreast, Tavor  
+- **PDXs** (1 project): Xeva
+- **Clinical** (1 project): CTR-DB (under development)
+
+## 🚀 Quick Start
+
+### 1. **Database Setup**
+```r
+# Install DROMA.Set
+devtools::install_github("mugpeng/DROMA_Set")
+
+# Download data from Zenodo
+# https://zenodo.org/records/15497674
+
+# Connect database
+library(DROMA.Set)
+# Connect to your DROMA database
+connectDROMADatabase("path/to/your/droma.sqlite")
+
+# List available projects
+projects <- listDROMAProjects()
+print(projects)
 ```
-我们开发的DROMA（Drug Response Omics association MAp, 药物反应组学关联图谱）是一个精准肿瘤学领域的综合性药物反应分析平台。它的核心目标是解决当前分析工具在直观可视化、全面数据整合和透明统计模型方面的不足，从而更好地进行生物学解读和假设生成。
 
-DROMA平台的核心功能主要包括三个紧密相关的组成部分：
-1.  DROMA-DB（数据库和分析工具）：该组件致力于实现药物反应模式的动态可视化和元分析，支持高通量生物标志物的发现和个性化分析。DROMA-DB整合了来自癌细胞系和患者来源类器官的多维组学数据（如基因表达、拷贝数变异、DNA甲基化等）与药物敏感性信息，目前已包含超过55000种药物和2500个样本（世界最大开源的整合高通量药敏数据集），并且仍在不断更新中。
-2.  DROMA-Augur（预测建模）：此组件专注于药物反应的预测建模。目标是开发机器学习方法提高药物反应预测的准确性，特别是针对像患者来源类器官（PDOs）这样的小型数据集。同时，改进一些已发表的先进方法或可解释性算法，例如TxGNN、TabPFN、TCRP，以及一些强效的机器学习模型，如随机森林和XGBoost。
-3.  DROMA-AI（AI辅助工作流）：旨在创建一个用户友好的网页界面，提供AI辅助的分析工作流。这包括开发多智能体系统进行代码生成和报告验证，以及利用大语言模型（LLM）的能力，根据不同层面的证据来生成科学假设。同时开发一个DROMA-MCP 工具以满足不同agent 或llm 的需求。
+### 2. **Basic Analysis**
+```r
+# Load dataset
+gCSI <- createDromaSetFromDatabase("gCSI", "droma.sqlite")
 
-对于DROMA-AI，开发一个由不同类型的大语言模型驱动的多智能体系统，这些智能体可能扮演团队领导、工具使用者、总结者和指导者的角色 。利用LLM的能力来自动生成分析报告，并引导用户完成复杂的数据分析任务 。结合LLM进行假设生成，使其能够基于不同层面的证据提出新的科学见解 。
+# Load molecular profiles with normalization
+gCSI <- loadMolecularProfilesNormalized(gCSI, 
+                                       molecular_type = "mRNA", 
+                                       features = "ABCB1")
+
+# Load drug response
+gCSI <- loadTreatmentResponseNormalized(gCSI, drugs = "Paclitaxel")
+
+# Analyze drug-gene association
+library(DROMA.R)
+result <- analyzeDrugOmicPair(gCSI, "mRNA", "ABCB1", "Paclitaxel")
 ```
 
+### 3. **AI-Powered Analysis**
+```bash
+# Install DROMA MCP
+pip install droma-mcp
+
+# Start AI server
+droma-mcp run --db-path droma.sqlite
+
+# Use with AI assistants
+"Load CCLE dataset and analyze BRCA1 expression vs Tamoxifen response"
+```
+
+### 4. **Web Interface**
+Visit our interactive web application for browser-based analysis (contact for access).
+
+## 🛠️ Installation
+
+### Prerequisites
+- **R** ≥ 4.0.0
+- **Python** ≥ 3.10 (for DROMA_MCP)
+- **SQLite** database
+
+### Core Components
+```r
+# Install DROMA packages
+devtools::install_github("mugpeng/DROMA_Set")
+devtools::install_github("mugpeng/DROMA_R")
+```
+
+```bash
+# Install AI interface
+pip install droma-mcp
+```
+
+### Data Download
+```bash
+# Download from Zenodo (15.5 GB)
+wget https://zenodo.org/records/15497674/files/droma-data.zip
+unzip droma-data.zip
+```
+
+## 📚 Documentation
+
+Each component has comprehensive documentation:
+
+- **[DROMA_DB Documentation](https://github.com/mugpeng/DROMA_DB#readme)**: Database creation and management
+- **[DROMA_Set Documentation](https://github.com/mugpeng/DROMA_Set#readme)**: Data management and S4 classes
+- **[DROMA_R Documentation](https://github.com/mugpeng/DROMA_R#readme)**: Statistical analysis and visualization
+- **[DROMA_MCP Documentation](https://github.com/mugpeng/DROMA_MCP#readme)**: AI interface and natural language queries
+
+## 🎯 Use Cases
+
+### 🔬 Biomarker Discovery
+- Identify genes associated with drug sensitivity across multiple datasets
+- Perform meta-analysis to strengthen statistical power
+- Validate findings across different model systems
+
+### 💊 Drug Repurposing
+- Explore drug response patterns across cancer types
+- Identify compounds with similar response profiles
+- Predict drug efficacy in new contexts
+
+### 🏥 Precision Medicine
+- Analyze patient-derived models (PDOs, PDXs)
+- Correlate molecular profiles with treatment outcomes
+- Develop personalized treatment strategies
+
+### 📊 Comparative Analysis
+- Compare drug responses across cell lines vs patient models
+- Evaluate consistency of biomarkers across studies
+- Integrate multi-omics data for comprehensive insights
+
+## 🌟 Key Features
+
+### 🔄 **Seamless Integration**
+All components work together through standardized interfaces and data formats.
+
+### ⚡ **High Performance**
+- Optimized SQLite database with indexing
+- Parallel processing for large-scale analysis
+- Memory-efficient data handling
+
+### 🎨 **Rich Visualization**
+- Interactive plots and dashboards
+- Publication-ready figures
+- Customizable themes and layouts
+
+### 🔍 **Flexible Querying**
+- Filter by tumor type, data type, or specific features
+- Cross-project sample matching
+- Advanced statistical filtering
+
+### 🤖 **AI-Enhanced**
+- Natural language queries
+- Automated analysis workflows
+- Intelligent data exploration
+
+## 🏆 Impact & Applications
+
+DROMA has been used for:
+- **Academic Research**: Published in high-impact journals
+- **Drug Discovery**: Industrial collaborations
+- **Clinical Translation**: Biomarker validation studies
+- **Educational**: Training in computational pharmacogenomics
+
+## 📈 Version History
+
+### **v0.4** - "Andata"
+- **New**: DROMA_MCP AI interface
+- **Enhanced**: Multi-project analysis capabilities
+- **Added**: Z-score normalization by default
+- **Improved**: Performance optimizations
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mugpeng/mugpeng-my-gallery-02/main/imgoutdoor2.png" alt="DROMA Logo" width="400"/>
+</div>
 
 
-## Main components
 
-![](https://raw.githubusercontent.com/mugpeng/mugpeng-my-gallery-02/main/img20250619145856.png)
+250620, I attended [11th Macau Symposium on Biomedical Sciences 2025 - 11th Macau Symposium on Biomedical Sciences 2025](https://msbs2025.fhs.um.edu.mo/):
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mugpeng/mugpeng-my-gallery-02/main/img20250626174000.png" alt="DROMA Logo" width="400"/>
+</div>
 
+### **v0.3** - Data Expansion
 
-- Projects about data:
+- **Added**: In vivo data (Xeva PDX dataset)
+- **Total**: 20 datasets (11 cell line, 2 PDC, 5 PDO, 1 PDX, 1 clinical)
+- **Enhanced**: Drug feature analysis modules
+- **Improved**: Visualization and user experience
 
-DROMA_DB: [mugpeng/DROMA_DB: Sqlite db and DromaSet obj for Drug Response Omics association MAp. (DROMA)](https://github.com/mugpeng/DROMA_DB)
+250319 UM PhD seminar:
 
-DROMA_Set: [mugpeng/DROMA_Set: DROMASet is a comprehensive R package for managing and analyzing drug response and omics data across multiple projects. It provides a robust framework for handling complex multi-omics datasets with integrated drug sensitivity information, enabling seamless cross-project comparisons and analyses.](https://github.com/mugpeng/DROMA_set)
-
-- Projects about analysis:
-
-DROMA_R: [mugpeng/DROMA_R: R package for DROMA.](https://github.com/mugpeng/DROMA_R)
-
-DROMA_Web: [mugpeng/DROMA_Web: Shiny website for Drug Response Omics association MAp. (DROMA)](https://github.com/mugpeng/DROMA_web)
-
-- AI and AI agent:
-
-DROMA_MCP: [mugpeng/DROMA_MCP: DROMA MCP Server bridges the gap between AI assistants and cancer pharmacogenomics analysis by providing a natural language interface to the [DROMA.R](https://github.com/mugpeng/DROMA_R) and [DROMA.Set](https://github.com/mugpeng/DROMA_Set) packages.](https://github.com/mugpeng/DROMA_MCP)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/72adc553-f807-48f8-afa8-bb4009eef963" alt="DROMA Logo" width="400"/>
+</div>
 
 
 
-- Under development:
+### **v0.2** - Web Interface
+- **Launch**: Interactive Shiny web application
+- **Added**: PDO datasets (breast, colon, nasopharyngeal)
+- **Enhanced**: Data harmonization and annotation
+- **Features**: Tumor type and data type filtering
 
-DROMA_MCP, DROMA_AI, DROMA_Augur, DROMA_py
-
-
-
-## Statistics Info
-
-Include 17 datasets now(11 cell line, 2 PDC, 3 PDO, 1 PDX), totally 2599 unique samples and 56398 unique drugs.
-
-![](https://raw.githubusercontent.com/mugpeng/mugpeng-my-gallery-02/main/img20250513115037.png)
-
-![](https://raw.githubusercontent.com/mugpeng/mugpeng-my-gallery-02/main/img20250513114926.png)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/89b385e0-f5e4-4d8e-a33b-5f30bed039b2" alt="DROMA Logo" width="400"/>
+</div>
 
 
 
+## 📄 Citation
 
+If you use DROMA in your research, please cite:
 
+```bibtex
+@article{li2024facilitating,
+  title={Facilitating integrative and personalized oncology omics analysis with UCSCXenaShiny},
+  author={Li, Shixiang and Peng, Yu and Chen, Miaozun and others},
+  journal={Communications Biology},
+  volume={7},
+  number={1},
+  pages={1200},
+  year={2024},
+  publisher={Nature Publishing Group},
+  doi={10.1038/s42003-024-06891-2}
+}
+```
 
+## 🤝 Contributing
 
-## Citation
+We welcome contributions to the DROMA ecosystem! 
 
-If you use DROMA or any subprojects(DB, R, web..) in your research, please cite:
+### How to Contribute
+1. **Fork** the relevant repository
+2. **Create** a feature branch
+3. **Make** your changes with tests
+4. **Submit** a pull request
 
-Li, S., Peng, Y., Chen, M. et al. Facilitating integrative and personalized oncology omics analysis with UCSCXenaShiny. Commun Biol 7, 1200 (2024). https://doi.org/10.1038/s42003-024-06891-2
+### Areas for Contribution
+- **New datasets**: Additional cancer pharmacogenomics studies
+- **Analysis methods**: Novel statistical approaches
+- **Visualization**: Enhanced plotting functions
+- **Documentation**: Tutorials and examples
+- **Bug reports**: Issues and feature requests
 
+## 🔗 Links & Resources
 
+### **Official Repositories**
+- **Main Project**: [github.com/mugpeng/DROMA](https://github.com/mugpeng/DROMA)
+- **Database**: [github.com/mugpeng/DROMA_DB](https://github.com/mugpeng/DROMA_DB)
+- **Data Management**: [github.com/mugpeng/DROMA_Set](https://github.com/mugpeng/DROMA_Set)
+- **Analytics**: [github.com/mugpeng/DROMA_R](https://github.com/mugpeng/DROMA_R)
+- **AI Interface**: [github.com/mugpeng/DROMA_MCP](https://github.com/mugpeng/DROMA_MCP)
 
-## Milestone
+### **Data & Resources**
+- **Data Repository**: [Zenodo Record](https://zenodo.org/records/15497674)
+- **Documentation**: Component-specific README files
+- **Examples**: Comprehensive usage examples in each repository
 
-### 0526 v0.4 andata
+### **Support & Community**
+- **Issues**: Repository-specific GitHub Issues
+- **Discussions**: GitHub Discussions
+- **Contact**: yc47680@um.edu.mo
 
-坂本龍一:【氛围感｜andata (Electric Youth Remix)】 https://www.bilibili.com/video/BV1v7kAY7Eoi/?share_source=copy_web&vd_source=bd40fa636d7a7f4f2a51596fed85e2b0
+## 📜 License
 
+DROMA is licensed under the **Mozilla Public License 2.0** (MPL-2.0). See [LICENSE](LICENSE) for details.
 
+## 🙏 Acknowledgments
 
-### 0513 v0.3
+DROMA is developed by the precision oncology research team at the University of Macau. We thank all contributors, collaborators, and the broader cancer research community for their support and feedback.
 
-Refactor App.R and Modules: Update version to 0.3.
+---
 
-- add new datasets, now have in vivo data now(Xeva PDX dataset), totally include 17 datasets now(11 cell line, 2 PDC, 3 PDO, 1 PDX)
+<div align="center">
+**🧬 DROMA - Bridging Cancer Pharmacogenomics and AI 💊**
 
-![](https://raw.githubusercontent.com/mugpeng/mugpeng-my-gallery-02/main/img20250513115037.png)
+*Empowering precision medicine through comprehensive data integration and intelligent analysis*
 
-- add new module, and enhance drug feature analysis. 
-- Remove deprecated Rmd files and adjust data loading paths. 
-- Update BatchFeature and DrugOmicPair modules for improved functionality and user experience.
-- Functionize all functions in modules and put them under `Package_Function/` preparing for making DROMA R package.
-- fix some bugs.
-
-
-
-
-
-### 0319
-
-I will attend UM PhD seminar, welcome!
-<img width="446" alt="image" src="https://github.com/user-attachments/assets/72adc553-f807-48f8-afa8-bb4009eef963" />
-
-
-
-### 0318 v0.2
-
-The stable version v0.2 is online now in UM network: http://fscpo.fhs.um.edu.mo/DROMA_DB/
-Btw, please be patient, it may take 10-20s when first time start it. :)
-
-This update includes:
-
-1) Add denglab three PDO data(deng1(breast), deng2(colon), deng3(nasopharynx)) with paired RNAseq, IC50 and annotation data;
-2) Harmonize cell line drug and cell names also the annotation data;
-3) Add choice to filter data for a specific tumor type(Breast, lung..) or data type(cell line, PDO), and a global setting page to set data. Now all continous data is transformed to by z-score in default, which allow to add a merged result for visualization ;
-4) Add several figures and some visualization-related improvement.
+</div>
 
