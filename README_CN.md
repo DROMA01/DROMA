@@ -77,11 +77,19 @@ DROMA平台由相互连接的组件组成，共同提供完整的药物反应分
 - **功能**: 数据集管理、数据加载、数据库探索
 - **集成**: 与ChatGPT、Claude和其他AI助手配合使用
 
+### 🐍 Python接口
+
+#### **[DROMA_Py](https://github.com/mugpeng/DROMA_Py)** - Python访问层
+- **用途**: 数据库操作和数据访问的Python包
+- **特性**: 完整DROMA生态系统集成、Python化API、无缝R-Python桥接
+- **功能**: 数据库查询、数据协调、批处理、跨平台兼容性
+- **安装**: PyPI可用 (`pip install droma-py`)
+- **目标用户**: Python数据科学家、生物信息学家、计算生物学家
+
 ### 🚀 未来组件
 
 - **DROMA_AI**: 自动化分析和假设生成的多智能体系统
 - **DROMA_Augur**: 药物反应预测的机器学习模型
-- **DROMA_py**: 更广泛可访问性的Python实现
 
 ## 📈 数据库统计
 
@@ -157,7 +165,23 @@ droma-mcp run --db-path droma.sqlite
 "加载CCLE数据集并分析BRCA1表达与他莫昔芬反应的关系"
 ```
 
-### 4. **网页界面**
+### 4. **Python接口**
+```python
+# 安装并使用DROMA_Py
+import droma_py as dp
+
+# 连接数据库
+db = dp.DROMADatabase("droma.sqlite")
+
+# 加载和协调数据
+data = db.load_molecular_profiles("CCLE", "mRNA", features=["BRCA1", "TP53"])
+harmonized = dp.harmonize_gene_names(data)
+
+# 查询药物反应
+drug_data = db.load_treatment_response("CCLE", drugs=["Tamoxifen"])
+```
+
+### 5. **网页界面**
 访问我们的交互式网页应用程序进行基于浏览器的分析（请联系获取访问权限）。
 
 ## 🛠️ 安装
@@ -175,8 +199,9 @@ devtools::install_github("mugpeng/DROMA_R")
 ```
 
 ```bash
-# 安装AI界面
-pip install droma-mcp
+# 安装Python组件
+pip install droma-py      # Python访问层
+pip install droma-mcp     # AI界面
 ```
 
 ### 数据下载
@@ -312,6 +337,7 @@ DROMA已被用于：
 - **数据库**: [github.com/mugpeng/DROMA_DB](https://github.com/mugpeng/DROMA_DB)
 - **数据管理**: [github.com/mugpeng/DROMA_Set](https://github.com/mugpeng/DROMA_Set)
 - **分析**: [github.com/mugpeng/DROMA_R](https://github.com/mugpeng/DROMA_R)
+- **Python接口**: [github.com/mugpeng/DROMA_Py](https://github.com/mugpeng/DROMA_Py)
 - **AI界面**: [github.com/mugpeng/DROMA_MCP](https://github.com/mugpeng/DROMA_MCP)
 
 ### **数据与资源**

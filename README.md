@@ -94,11 +94,19 @@ The DROMA platform consists of interconnected components that work together to p
 - **Capabilities**: Dataset management, data loading, database exploration
 - **Integration**: Works with ChatGPT, Claude, and other AI assistants
 
+### 🐍 Python Interface
+
+#### **[DROMA_Py](https://github.com/mugpeng/DROMA_Py)** - Python Access Layer
+- **Purpose**: Python package for database operations and data access
+- **Features**: Full DROMA ecosystem integration, Pythonic API, seamless R-Python bridge
+- **Capabilities**: Database queries, data harmonization, batch processing, cross-platform compatibility
+- **Installation**: Available on PyPI (`pip install droma-py`)
+- **Target Users**: Python data scientists, bioinformaticians, computational biologists
+
 ### 🚀 Future Components
 
 - **DROMA_AI**: Multi-agent systems for automated analysis and hypothesis generation
 - **DROMA_Augur**: Machine learning models for drug response prediction
-- **DROMA_py**: Python implementation for broader accessibility
 
 ## 📈 Database Statistics
 
@@ -179,7 +187,23 @@ droma-mcp run --db-path droma.sqlite
 "Load CCLE dataset and analyze BRCA1 expression vs Tamoxifen response"
 ```
 
-### 4. **Web Interface**
+### 4. **Python Interface**
+```python
+# Install and use DROMA_Py
+import droma_py as dp
+
+# Connect to database
+db = dp.DROMADatabase("droma.sqlite")
+
+# Load and harmonize data
+data = db.load_molecular_profiles("CCLE", "mRNA", features=["BRCA1", "TP53"])
+harmonized = dp.harmonize_gene_names(data)
+
+# Query drug response
+drug_data = db.load_treatment_response("CCLE", drugs=["Tamoxifen"])
+```
+
+### 5. **Web Interface**
 Visit our interactive web application for browser-based analysis (contact for access).
 
 ## 🛠️ Installation
@@ -197,8 +221,9 @@ devtools::install_github("mugpeng/DROMA_R")
 ```
 
 ```bash
-# Install AI interface
-pip install droma-mcp
+# Install Python components
+pip install droma-py      # Python access layer
+pip install droma-mcp     # AI interface
 ```
 
 ### Data Download
@@ -384,6 +409,7 @@ We welcome contributions to the DROMA ecosystem!
 - **Database**: [github.com/mugpeng/DROMA_DB](https://github.com/mugpeng/DROMA_DB)
 - **Data Management**: [github.com/mugpeng/DROMA_Set](https://github.com/mugpeng/DROMA_Set)
 - **Analytics**: [github.com/mugpeng/DROMA_R](https://github.com/mugpeng/DROMA_R)
+- **Python Interface**: [github.com/mugpeng/DROMA_Py](https://github.com/mugpeng/DROMA_Py)
 - **AI Interface**: [github.com/mugpeng/DROMA_MCP](https://github.com/mugpeng/DROMA_MCP)
 
 ### **Data & Resources**
