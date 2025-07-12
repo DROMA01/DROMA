@@ -6,7 +6,7 @@
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL--2.0-yellow.svg)](https://opensource.org/licenses/MPL-2.0)
 [![R](https://img.shields.io/badge/R-%3E%3D4.0.0-blue.svg)](https://www.r-project.org/)
 [![Python](https://img.shields.io/badge/Python-3.10+-green.svg)](https://www.python.org/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15742800.svg)](https://doi.org/10.5281/zenodo.15742800)
+[![DOI](https://zenodo.org/badge/DOI/10.1038/s42003-024-06891-2.svg)](https://doi.org/10.1038/s42003-024-06891-2)
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/000473aa-7869-41c8-9352-e8481ba922fa" alt="DROMA Logo" width="400"/>
@@ -40,7 +40,7 @@ Explore the interactive web interface with comprehensive documentation, componen
 
 ### 🚀 Key Highlights
 
-- **🗄️ Massive Dataset**: **18 projects** with **2,600+ samples** and **56,000+ drugs** - the world's largest open-source integrated drug sensitivity dataset
+- **🗄️ Massive Dataset**: **20 projects** with **2,600+ samples** and **56,000+ drugs** - the world's largest open-source integrated drug sensitivity dataset
 - **🧬 Multi-Omics Support**: mRNA, CNV, mutations, methylation, proteomics, and more
 - **🏥 Diverse Model Systems**: Cell lines, PDOs (Patient-Derived Organoids), PDXs (Patient-Derived Xenografts), and PDCs (Patient-Derived Cells)
 - **🤖 AI-Powered**: Natural language interactions via MCP (Model Context Protocol) server

@@ -6,7 +6,7 @@
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL--2.0-yellow.svg)](https://opensource.org/licenses/MPL-2.0)
 [![R](https://img.shields.io/badge/R-%3E%3D4.0.0-blue.svg)](https://www.r-project.org/)
 [![Python](https://img.shields.io/badge/Python-3.10+-green.svg)](https://www.python.org/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15742800.svg)](https://doi.org/10.5281/zenodo.15742800)
+[![DOI](https://zenodo.org/badge/DOI/10.1038/s42003-024-06891-2.svg)](https://doi.org/10.1038/s42003-024-06891-2)
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/000473aa-7869-41c8-9352-e8481ba922fa" alt="DROMA Logo" width="400"/>
@@ -23,7 +23,7 @@
 
 ### 🚀 核心亮点
 
-- **🗄️ 海量数据集**: **18个项目**包含**2,600+样本**和**56,000+药物** - 世界最大开源整合药敏数据集
+- **🗄️ 海量数据集**: **20个项目**包含**2,600+样本**和**56,000+药物** - 世界最大开源整合药敏数据集
 - **🧬 多组学支持**: mRNA、CNV、突变、甲基化、蛋白质组学等
 - **🏥 多样模型系统**: 细胞系、PDO（患者来源类器官）、PDX（患者来源异种移植）、PDC（患者来源细胞）
 - **🤖 AI驱动**: 通过MCP（模型上下文协议）服务器支持自然语言交互
@@ -43,7 +43,7 @@ DROMA平台由相互连接的组件组成，共同提供完整的药物反应分
 #### **[DROMA_DB](https://github.com/mugpeng/DROMA_DB)** - 数据库基础
 - **用途**: SQLite数据库创建和管理
 - **特性**: 面向项目的结构、高效查询、优化索引
-- **内容**: 18个项目的综合组学和药物反应数据
+- **内容**: 20个项目的综合组学和药物反应数据
 - **集成**: 所有其他DROMA组件的基础
 
 #### **[DROMA_Set](https://github.com/mugpeng/DROMA_Set)** - 数据管理
