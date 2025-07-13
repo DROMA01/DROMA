@@ -1,8 +1,8 @@
 # DROMA
 **药物反应组学关联图谱** (DROMA, 卓玛)  
 
-[![Website](https://img.shields.io/website?url=https%3A//droma01.github.io/)](https://droma01.github.io/)
-[![GitHub Stars](https://img.shields.io/github/stars/mugpeng/DROMA?style=social)](https://github.com/mugpeng/DROMA)
+[![Website](https://img.shields.io/website?url=https%3A//droma01.github.io/DROMA)](https://droma01.github.io/DROMA)
+[![GitHub Stars](https://img.shields.io/github/stars/DROMA01/DROMA?style=social)](https://github.com/DROMA01/DROMA)
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL--2.0-yellow.svg)](https://opensource.org/licenses/MPL-2.0)
 [![R](https://img.shields.io/badge/R-%3E%3D4.0.0-blue.svg)](https://www.r-project.org/)
 [![Python](https://img.shields.io/badge/Python-3.10+-green.svg)](https://www.python.org/)
@@ -13,7 +13,7 @@
 </div>
 
 ## 🌐 官方网站
-**访问DROMA官方网站：[https://droma01.github.io/](https://droma01.github.io/)**
+**访问DROMA官方网站：[https://droma01.github.io/DROMA/](https://droma01.github.io/DROMA/)**
 
 探索交互式网页界面，包含完整文档、组件详情和实时示例。
 
