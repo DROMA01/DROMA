@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DROMA - Drug Response Omics association MAp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="https://github.com/user-attachments/assets/000473aa-7869-41c8-9352-e8481ba922fa" alt="DROMA Logo" class="logo">
+                <span class="brand-text">DROMA</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="components.html" class="nav-link">Components</a>
+                <a href="https://droma01.github.io/components.html#droma-db" class="nav-link">Data</a>
+                <a href="https://github.com/mugpeng/DROMA" class="nav-link">Documentation</a>
+                <a href="https://github.com/DROMA01" class="nav-link">About</a>
+                <a href="https://github.com/mugpeng/DROMA" class="nav-link github-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-dna"></i>
+                    <span>Precision Oncology Platform</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">DROMA</span>
+                    <br>Drug Response Omics association MAp
+                </h1>
+                <p class="hero-description">
+                    Bridging cancer pharmacogenomics data and actionable insights through advanced analytics, 
+                    AI-powered tools, and user-friendly interfaces. The world's largest open-source integrated 
+                    drug sensitivity dataset with <strong>20 projects</strong>, <strong>2,600+ samples</strong>, 
+                    and <strong>56,000+ drugs</strong>.
+                </p>
+                <div class="hero-buttons">
+                    <a href="docs.html" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Get Started
+                    </a>
+                    <a href="components.html" class="btn btn-secondary">
+                        <i class="fas fa-cubes"></i>
+                        Explore Components
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number projects">20</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number samples">2,600+</span>
+                        <span class="stat-label">Samples</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number drugs">56K+</span>
+                        <span class="stat-label">Drugs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dna-animation">
+                    <div class="dna-strand">
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                        <div class="base-pair"></div>
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="element element-1"><i class="fas fa-pills"></i></div>
+                    <div class="element element-2"><i class="fas fa-microscope"></i></div>
+                    <div class="element element-3"><i class="fas fa-chart-line"></i></div>
+                    <div class="element element-4"><i class="fas fa-robot"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Key Highlights</h2>
+                <p class="section-subtitle">Empowering precision medicine through comprehensive data integration</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Massive Dataset</h3>
+                    <p>World's largest open-source integrated drug sensitivity dataset with comprehensive coverage</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Multi-Omics Support</h3>
+                    <p>mRNA, CNV, mutations, methylation, proteomics, and more data types</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Diverse Model Systems</h3>
+                    <p>Cell lines, PDOs, PDXs, and PDCs for comprehensive analysis</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered</h3>
+                    <p>Natural language interactions via MCP server integration</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Meta-analysis, biomarker discovery, and statistical modeling</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Web Interface</h3>
+                    <p>Interactive Shiny application for intuitive browser-based analysis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DROMA Ecosystem -->
+    <section class="ecosystem">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">DROMA Ecosystem</h2>
+                <p class="section-subtitle">Interconnected components working together seamlessly</p>
+            </div>
+            <div class="ecosystem-grid">
+                <div class="ecosystem-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Data Infrastructure
+                    </h3>
+                    <div class="component-card">
+                        <div class="component-header">
+                            <h4>DROMA_DB</h4>
+                            <span class="component-tag">Database</span>
+                        </div>
+                        <p>SQLite database creation and management foundation</p>
+                        <a href="components.html#droma-db" class="component-link">Learn More</a>
+                    </div>
+                    <div class="component-card">
+                        <div class="component-header">
+                            <h4>DROMA_Set</h4>
+                            <span class="component-tag">Data Management</span>
+                        </div>
+                        <p>R package for multi-project data management</p>
+                        <a href="components.html#droma-set" class="component-link">Learn More</a>
+                    </div>
+                </div>
+                <div class="ecosystem-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-microscope"></i>
+                        Analysis Engine
+                    </h3>
+                    <div class="component-card">
+                        <div class="component-header">
+                            <h4>DROMA_R</h4>
+                            <span class="component-tag">Analytics</span>
+                        </div>
+                        <p>Statistical analysis and visualization for drug-omics associations</p>
+                        <a href="components.html#droma-r" class="component-link">Learn More</a>
+                    </div>
+                    <div class="component-card">
+                        <div class="component-header">
+                            <h4>DROMA_Py</h4>
+                            <span class="component-tag">Python</span>
+                        </div>
+                        <p>Python package for database operations and data access</p>
+                        <a href="components.html#droma-py" class="component-link">Learn More</a>
+                    </div>
+                </div>
+                <div class="ecosystem-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-desktop"></i>
+                        User Interfaces
+                    </h3>
+                    <div class="component-card">
+                        <div class="component-header">
+                            <h4>DROMA_Web</h4>
+                            <span class="component-tag">Web App</span>
+                        </div>
+                        <p>Interactive Shiny web interface</p>
+                        <a href="components.html#droma-web" class="component-link">Learn More</a>
+                    </div>
+                    <div class="component-card">
+                        <div class="component-header">
+                            <h4>DROMA_MCP</h4>
+                            <span class="component-tag">AI Interface</span>
+                        </div>
+                        <p>Natural language interactions with AI assistants</p>
+                        <a href="components.html#droma-mcp" class="component-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section class="quick-start">
+        <div class="container">
+            <div class="quick-start-content">
+                <div class="quick-start-text">
+                    <h2>Get Started in Minutes</h2>
+                    <p>Begin your drug-omics analysis journey with DROMA's comprehensive ecosystem</p>
+                    <div class="quick-start-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Install Components</h4>
+                                <p>Install DROMA.Set and DROMA.R packages from GitHub</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Download Data</h4>
+                                <p>Get the comprehensive dataset from Zenodo</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Start Analyzing</h4>
+                                <p>Create database and begin your analysis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="docs.html" class="btn btn-primary">
+                        <i class="fas fa-book"></i>
+                        View Documentation
+                    </a>
+                </div>
+                <div class="quick-start-code">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">R</span>
+                            <button class="copy-btn" onclick="copyCode()">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre><code id="code-content"># Install DROMA packages
+devtools::install_github("mugpeng/DROMA_Set")
+devtools::install_github("mugpeng/DROMA_R")
+
+# Create database
+library(DROMA.Set)
+createDROMADatabase("droma.sqlite", "data/")
+
+# Start analysis
+gCSI <- createDromaSetFromDatabase("gCSI", "droma.sqlite")
+result <- analyzeDrugOmicPair(gCSI, "mRNA", "ABCB1", "Paclitaxel")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="https://github.com/user-attachments/assets/000473aa-7869-41c8-9352-e8481ba922fa" alt="DROMA Logo" class="footer-logo">
+                        <h3>DROMA</h3>
+                    </div>
+                    <p>Empowering precision medicine through comprehensive data integration and intelligent analysis</p>
+                    <div class="social-links">
+                        <a href="https://github.com/mugpeng/DROMA" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:yc47680@um.edu.mo"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Components</h4>
+                    <ul>
+                        <li><a href="components.html#droma-db">DROMA_DB</a></li>
+                        <li><a href="components.html#droma-set">DROMA_Set</a></li>
+                        <li><a href="components.html#droma-r">DROMA_R</a></li>
+                        <li><a href="components.html#droma-web">DROMA_Web</a></li>
+                        <li><a href="components.html#droma-mcp">DROMA_MCP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="docs.html">Documentation</a></li>
+                        <li><a href="data.html">Data Repository</a></li>
+                        <li><a href="https://zenodo.org/records/15497674" target="_blank">Zenodo Dataset</a></li>
+                        <li><a href="https://github.com/DROMA01">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Citation</h4>
+                    <p class="citation">
+                        Li, S., Peng, Y., Chen, M. et al. Facilitating integrative and personalized oncology omics analysis with UCSCXenaShiny. <em>Commun Biol</em> 7, 1200 (2024).
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DROMA Project. Licensed under MPL-2.0.</p>
+                <p>Developed by the Precision Oncology Research Team at University of Macau</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components - DROMA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="https://github.com/user-attachments/assets/000473aa-7869-41c8-9352-e8481ba922fa" alt="DROMA Logo" class="logo">
+                <span class="brand-text">DROMA</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="components.html" class="nav-link active">Components</a>
+                <a href="data.html" class="nav-link">Data</a>
+                <a href="docs.html" class="nav-link">Documentation</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="https://github.com/mugpeng/DROMA" class="nav-link github-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>DROMA Components</h1>
+                <p>Explore the interconnected modules that power the DROMA ecosystem</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Detail -->
+    <section class="components-detail">
+        <div class="container">
+            
+            <!-- DROMA_DB -->
+            <div class="component-detail" id="droma-db">
+                <div class="component-header">
+                    <div class="component-icon db-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="component-info">
+                        <h2>DROMA_DB</h2>
+                        <span class="component-subtitle">Database Foundation</span>
+                        <div class="component-badges">
+                            <span class="badge">SQLite</span>
+                            <span class="badge">18 Projects</span>
+                            <span class="badge">Data Management</span>
+                        </div>
+                    </div>
+                    <div class="component-links">
+                        <a href="https://github.com/mugpeng/DROMA_DB" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="component-content">
+                    <div class="content-grid">
+                        <div class="content-main">
+                            <h3>Overview</h3>
+                            <p>DROMA_DB is the foundational component that converts diverse omics datasets into a structured SQLite database. It provides efficient data storage and retrieval for multi-omics drug response studies across different model systems.</p>
+                            
+                            <h3>Key Features</h3>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Unified database structure for heterogeneous data</li>
+                                <li><i class="fas fa-check"></i> Project-oriented architecture with 18+ datasets</li>
+                                <li><i class="fas fa-check"></i> Optimized SQLite with indexing for fast queries</li>
+                                <li><i class="fas fa-check"></i> Comprehensive metadata management</li>
+                                <li><i class="fas fa-check"></i> Support for multiple model systems (Cell Lines, PDOs, PDXs, PDCs)</li>
+                            </ul>
+                            
+                            <h3>Database Content</h3>
+                            <p>Contains comprehensive data from 18 projects including:</p>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <span class="stat-value">2,600+</span>
+                                    <span class="stat-label">Unique Samples</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">56,000+</span>
+                                    <span class="stat-label">Unique Drugs</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">8</span>
+                                    <span class="stat-label">Data Types</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-sidebar">
+                            <div class="info-box">
+                                <h4>Quick Start</h4>
+                                <div class="code-snippet">
+                                    <pre><code># Create database
+library(DROMA.Set)
+createDROMADatabase(
+  "droma.sqlite", 
+  "data/"
+)</code></pre>
+                                </div>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4>Data Types Supported</h4>
+                                <ul class="data-types">
+                                    <li>mRNA Expression</li>
+                                    <li>Copy Number Variation</li>
+                                    <li>Mutations (Gene/Site)</li>
+                                    <li>DNA Methylation</li>
+                                    <li>Proteomics (RPPA/MS)</li>
+                                    <li>Gene Fusions</li>
+                                    <li>Drug Response</li>
+                                    <li>Clinical Data</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROMA_Set -->
+            <div class="component-detail" id="droma-set">
+                <div class="component-header">
+                    <div class="component-icon set-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="component-info">
+                        <h2>DROMA_Set</h2>
+                        <span class="component-subtitle">Data Management Package</span>
+                        <div class="component-badges">
+                            <span class="badge">R Package</span>
+                            <span class="badge">S4 Classes</span>
+                            <span class="badge">Multi-Project</span>
+                        </div>
+                    </div>
+                    <div class="component-links">
+                        <a href="https://github.com/mugpeng/DROMA_Set" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="component-content">
+                    <div class="content-grid">
+                        <div class="content-main">
+                            <h3>Overview</h3>
+                            <p>DROMA_Set is a comprehensive R package that provides robust S4 classes for managing and analyzing drug response and omics data across multiple projects. It enables seamless cross-project comparisons and analyses.</p>
+                            
+                            <h3>Core Classes</h3>
+                            <div class="class-grid">
+                                <div class="class-card">
+                                    <h4>DromaSet</h4>
+                                    <p>Single-project analysis with molecular profiles and drug response data management</p>
+                                </div>
+                                <div class="class-card">
+                                    <h4>MultiDromaSet</h4>
+                                    <p>Cross-project analysis with sample overlap detection and comparative studies</p>
+                                </div>
+                            </div>
+                            
+                            <h3>Key Features</h3>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Flexible data loading with filtering options</li>
+                                <li><i class="fas fa-check"></i> Sample overlap detection across projects</li>
+                                <li><i class="fas fa-check"></i> Comprehensive metadata management</li>
+                                <li><i class="fas fa-check"></i> Database connectivity and efficient querying</li>
+                                <li><i class="fas fa-check"></i> Support for all molecular profile types</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-sidebar">
+                            <div class="info-box">
+                                <h4>Installation</h4>
+                                <div class="code-snippet">
+                                    <pre><code># Install from GitHub
+devtools::install_github(
+  "mugpeng/DROMA_Set"
+)</code></pre>
+                                </div>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4>Example Usage</h4>
+                                <div class="code-snippet">
+                                    <pre><code># Create DromaSet
+gCSI <- createDromaSetFromDatabase(
+  "gCSI", "droma.sqlite"
+)
+
+# Load data
+gCSI <- loadMolecularProfiles(
+  gCSI, "mRNA", c("BRCA1", "TP53")
+)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROMA_R -->
+            <div class="component-detail" id="droma-r">
+                <div class="component-header">
+                    <div class="component-icon analysis-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="component-info">
+                        <h2>DROMA_R</h2>
+                        <span class="component-subtitle">Advanced Analytics Engine</span>
+                        <div class="component-badges">
+                            <span class="badge">Statistical Analysis</span>
+                            <span class="badge">Visualization</span>
+                            <span class="badge">Meta-Analysis</span>
+                        </div>
+                    </div>
+                    <div class="component-links">
+                        <a href="https://github.com/mugpeng/DROMA_R" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="component-content">
+                    <div class="content-grid">
+                        <div class="content-main">
+                            <h3>Overview</h3>
+                            <p>DROMA_R provides advanced statistical analysis and visualization functions for drug-omics associations. It supports meta-analysis across multiple datasets and comprehensive biomarker discovery workflows.</p>
+                            
+                            <h3>Analysis Methods</h3>
+                            <div class="methods-grid">
+                                <div class="method-card">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <h4>Statistical Analysis</h4>
+                                    <p>Spearman correlation, Wilcoxon tests, Cliff's Delta effect sizes</p>
+                                </div>
+                                <div class="method-card">
+                                    <i class="fas fa-chart-area"></i>
+                                    <h4>Meta-Analysis</h4>
+                                    <p>Cross-project analysis with forest plots and effect size estimation</p>
+                                </div>
+                                <div class="method-card">
+                                    <i class="fas fa-layer-group"></i>
+                                    <h4>Batch Processing</h4>
+                                    <p>Efficient analysis of multiple features with parallel processing</p>
+                                </div>
+                            </div>
+                            
+                            <h3>Visualization Outputs</h3>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Forest plots for meta-analysis results</li>
+                                <li><i class="fas fa-check"></i> Volcano plots for batch analysis</li>
+                                <li><i class="fas fa-check"></i> Scatter plots for continuous associations</li>
+                                <li><i class="fas fa-check"></i> Box plots for discrete comparisons</li>
+                                <li><i class="fas fa-check"></i> Publication-ready figure themes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-sidebar">
+                            <div class="info-box">
+                                <h4>Z-score Normalization</h4>
+                                <p>All data loading functions apply Z-score normalization by default for improved analysis consistency across datasets.</p>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4>Performance Features</h4>
+                                <ul class="performance-list">
+                                    <li>Parallel processing support</li>
+                                    <li>Memory-efficient data handling</li>
+                                    <li>Optimized statistical computations</li>
+                                    <li>Batch analysis capabilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROMA_MCP -->
+            <div class="component-detail" id="droma-mcp">
+                <div class="component-header">
+                    <div class="component-icon ai-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="component-info">
+                        <h2>DROMA_MCP</h2>
+                        <span class="component-subtitle">AI Interface Server</span>
+                        <div class="component-badges">
+                            <span class="badge">Python</span>
+                            <span class="badge">Natural Language</span>
+                            <span class="badge">AI Integration</span>
+                        </div>
+                    </div>
+                    <div class="component-links">
+                        <a href="https://github.com/mugpeng/DROMA_MCP" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="component-content">
+                    <div class="content-grid">
+                        <div class="content-main">
+                            <h3>Overview</h3>
+                            <p>DROMA_MCP is a Model Context Protocol server that bridges AI assistants with cancer pharmacogenomics analysis. It enables natural language interactions with the DROMA ecosystem through ChatGPT, Claude, and other AI assistants.</p>
+                            
+                            <h3>AI Capabilities</h3>
+                            <div class="ai-features">
+                                <div class="ai-feature">
+                                    <i class="fas fa-comments"></i>
+                                    <h4>Natural Language Queries</h4>
+                                    <p>Ask questions about drug-omics associations in plain English and get automated analysis results.</p>
+                                </div>
+                                <div class="ai-feature">
+                                    <i class="fas fa-database"></i>
+                                    <h4>Dataset Management</h4>
+                                    <p>Load and manage DROMA datasets with simple conversational commands.</p>
+                                </div>
+                                <div class="ai-feature">
+                                    <i class="fas fa-chart-line"></i>
+                                    <h4>Automated Analysis</h4>
+                                    <p>Perform complex multi-omics analysis through AI-guided workflows.</p>
+                                </div>
+                            </div>
+                            
+                            <h3>Integration Examples</h3>
+                            <div class="example-queries">
+                                <div class="query-example">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>"Load the CCLE dataset and analyze BRCA1 expression vs Tamoxifen response"</p>
+                                </div>
+                                <div class="query-example">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>"Show me all genes associated with Paclitaxel resistance across multiple projects"</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-sidebar">
+                            <div class="info-box">
+                                <h4>Installation</h4>
+                                <div class="code-snippet">
+                                    <pre><code># Install via pip
+pip install droma-mcp
+
+# Start server
+droma-mcp run --db-path droma.sqlite</code></pre>
+                                </div>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4>Supported AI Assistants</h4>
+                                <ul class="ai-list">
+                                    <li><i class="fas fa-check"></i> ChatGPT</li>
+                                    <li><i class="fas fa-check"></i> Claude</li>
+                                    <li><i class="fas fa-check"></i> Custom MCP Clients</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROMA_Py -->
+            <div class="component-detail" id="droma-py">
+                <div class="component-header">
+                    <div class="component-icon python-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="component-info">
+                        <h2>DROMA_Py</h2>
+                        <span class="component-subtitle">Python Access Layer</span>
+                        <div class="component-badges">
+                            <span class="badge">Python Package</span>
+                            <span class="badge">PyPI</span>
+                            <span class="badge">Cross-Platform</span>
+                        </div>
+                    </div>
+                    <div class="component-links">
+                        <a href="https://github.com/mugpeng/DROMA_Py" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View Repository
+                        </a>
+                        <a href="https://pypi.org/project/droma-py/" class="btn btn-secondary" target="_blank">
+                            <i class="fas fa-download"></i> PyPI Package
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="component-content">
+                    <div class="content-grid">
+                        <div class="content-main">
+                            <h3>Overview</h3>
+                            <p>DROMA_Py provides a Pythonic interface to the DROMA ecosystem, enabling Python data scientists and bioinformaticians to access and analyze cancer pharmacogenomics data seamlessly. It bridges the gap between R-based DROMA components and Python workflows.</p>
+                            
+                            <h3>Core Capabilities</h3>
+                            <div class="capabilities-grid">
+                                <div class="capability-card">
+                                    <i class="fas fa-database"></i>
+                                    <h4>Database Operations</h4>
+                                    <p>Direct SQLite database access with optimized queries and connection management</p>
+                                </div>
+                                <div class="capability-card">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <h4>Data Harmonization</h4>
+                                    <p>Advanced gene and drug name normalization using fuzzy matching algorithms</p>
+                                </div>
+                                <div class="capability-card">
+                                    <i class="fas fa-layer-group"></i>
+                                    <h4>Batch Processing</h4>
+                                    <p>Efficient large-scale data processing with parallel execution support</p>
+                                </div>
+                            </div>
+                            
+                            <h3>Python Integration</h3>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Pandas DataFrame integration</li>
+                                <li><i class="fas fa-check"></i> NumPy array support</li>
+                                <li><i class="fas fa-check"></i> Type hints for better IDE support</li>
+                                <li><i class="fas fa-check"></i> Comprehensive error handling</li>
+                                <li><i class="fas fa-check"></i> Jupyter notebook compatibility</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-sidebar">
+                            <div class="info-box">
+                                <h4>Installation</h4>
+                                <div class="code-snippet">
+                                    <pre><code># Install from PyPI
+pip install droma-py
+
+# Basic usage
+import droma_py as dp
+db = dp.DROMADatabase("droma.sqlite")</code></pre>
+                                </div>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4>Package Features</h4>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> 6 Python modules</li>
+                                    <li><i class="fas fa-check"></i> 4 example scripts</li>
+                                    <li><i class="fas fa-check"></i> Complete documentation</li>
+                                    <li><i class="fas fa-check"></i> 100% type coverage</li>
+                                    <li><i class="fas fa-check"></i> Cross-platform support</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4>Quick Example</h4>
+                                <div class="code-snippet">
+                                    <pre><code># Load molecular data
+data = db.load_molecular_profiles(
+    "CCLE", "mRNA", features=["BRCA1"]
+)
+
+# Harmonize gene names
+harmonized = dp.harmonize_gene_names(data)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROMA_Web -->
+            <div class="component-detail" id="droma-web">
+                <div class="component-header">
+                    <div class="component-icon web-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="component-info">
+                        <h2>DROMA_Web</h2>
+                        <span class="component-subtitle">Interactive Web Application</span>
+                        <div class="component-badges">
+                            <span class="badge">Shiny App</span>
+                            <span class="badge">Interactive</span>
+                            <span class="badge">Browser-based</span>
+                        </div>
+                    </div>
+                    <div class="component-links">
+                        <a href="https://github.com/mugpeng/DROMA_Web" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View Repository
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="component-content">
+                    <div class="content-grid">
+                        <div class="content-main">
+                            <h3>Overview</h3>
+                            <p>DROMA_Web provides an intuitive, browser-based interface for drug response and omics analysis. Built with Shiny, it offers real-time interactive analysis without requiring programming knowledge.</p>
+                            
+                            <h3>Web Modules</h3>
+                            <div class="modules-grid">
+                                <div class="module-card">
+                                    <i class="fas fa-pills"></i>
+                                    <h4>Drug Feature Analysis</h4>
+                                    <p>Interactive exploration of drug response patterns and molecular associations</p>
+                                </div>
+                                <div class="module-card">
+                                    <i class="fas fa-layer-group"></i>
+                                    <h4>Batch Analysis</h4>
+                                    <p>High-throughput analysis of multiple genes or drugs simultaneously</p>
+                                </div>
+                                <div class="module-card">
+                                    <i class="fas fa-link"></i>
+                                    <h4>Drug-Omics Pairing</h4>
+                                    <p>Correlation analysis between drug sensitivity and molecular profiles</p>
+                                </div>
+                            </div>
+                            
+                            <h3>User-Friendly Features</h3>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> No programming knowledge required</li>
+                                <li><i class="fas fa-check"></i> Real-time interactive visualizations</li>
+                                <li><i class="fas fa-check"></i> Dynamic filtering and data exploration</li>
+                                <li><i class="fas fa-check"></i> Export results and figures</li>
+                                <li><i class="fas fa-check"></i> Cross-platform browser compatibility</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-sidebar">
+                            <div class="info-box">
+                                <h4>Access Information</h4>
+                                <p>Contact the DROMA team for access to the web application deployment.</p>
+                                <a href="mailto:yc47680@um.edu.mo" class="contact-link">
+                                    <i class="fas fa-envelope"></i> Request Access
+                                </a>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4>Key Benefits</h4>
+                                <ul class="benefits-list">
+                                    <li>No installation required</li>
+                                    <li>Immediate results</li>
+                                    <li>Interactive exploration</li>
+                                    <li>Publication-ready plots</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="https://github.com/user-attachments/assets/000473aa-7869-41c8-9352-e8481ba922fa" alt="DROMA Logo" class="footer-logo">
+                        <h3>DROMA</h3>
+                    </div>
+                    <p>Empowering precision medicine through comprehensive data integration and intelligent analysis</p>
+                    <div class="social-links">
+                        <a href="https://github.com/mugpeng/DROMA" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:yc47680@um.edu.mo"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Components</h4>
+                    <ul>
+                        <li><a href="#droma-db">DROMA_DB</a></li>
+                        <li><a href="#droma-set">DROMA_Set</a></li>
+                        <li><a href="#droma-r">DROMA_R</a></li>
+                        <li><a href="#droma-py">DROMA_Py</a></li>
+                        <li><a href="#droma-web">DROMA_Web</a></li>
+                        <li><a href="#droma-mcp">DROMA_MCP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="docs.html">Documentation</a></li>
+                        <li><a href="data.html">Data Repository</a></li>
+                        <li><a href="https://zenodo.org/records/15742800" target="_blank">Zenodo Dataset</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Citation</h4>
+                    <p class="citation">
+                        Li, S., Peng, Y., Chen, M. et al. Facilitating integrative and personalized oncology omics analysis with UCSCXenaShiny. <em>Commun Biol</em> 7, 1200 (2024).
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DROMA Project. Licensed under MPL-2.0.</p>
+                <p>Developed by the Precision Oncology Research Team at University of Macau</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
